@@ -16,6 +16,11 @@ export const footerContainer = css({
   '@media (max-width: 768px)': {
     padding: '1rem',  
   },
+
+  '@media (max-width: 480px)': {  // Para móviles más pequeños
+    padding: '0.8rem',
+    gap: '0.5rem',
+  },
 });
 
 export const logoContainer = css({
@@ -30,6 +35,10 @@ export const logoContainer = css({
     '@media (max-width: 768px)': {
       width: '150px',  
     },
+
+    '@media (max-width: 480px)': {  // Ajustes para móviles pequeños
+      width: '120px',  
+    },
   },
 });
 
@@ -43,5 +52,10 @@ export const textContainer = css({
     fontSize: '0.75rem',  
     maxWidth: '100%',  
     padding: '0 1rem', 
+  },
+
+  '@media (max-width: 480px)': {  // Ajustes para móviles pequeños
+    fontSize: '0.7rem',  
+    padding: '0 0.5rem',  
   },
 });

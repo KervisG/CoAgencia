@@ -10,9 +10,13 @@ export const anunciosContainer = css({
   textAlign: 'center',
   borderRadius: '8px',
   margin: '0 auto',
-  
-  '@media (max-width: 768px)': {
-    padding: '1rem', 
+
+  '@media (max-width: 1024px)': { // Para tablets
+    padding: '1.5rem',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    padding: '1rem',
   },
 });
 
@@ -22,8 +26,12 @@ export const heading = css({
   color: '#000',
   marginBottom: '2rem',
 
-  '@media (max-width: 768px)': {
-    fontSize: '2rem',  
+  '@media (max-width: 1024px)': { // Para tablets
+    fontSize: '2.2rem',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    fontSize: '2rem',
     marginBottom: '1.5rem',
   },
 });
@@ -31,11 +39,15 @@ export const heading = css({
 export const description = css({
   fontSize: '1.4rem',
   lineHeight: '1.8',
-  marginBottom: '3rem', 
+  marginBottom: '3rem',
   color: '#333',
 
-  '@media (max-width: 768px)': {
-    fontSize: '1.2rem', 
+  '@media (max-width: 1024px)': { // Para tablets
+    fontSize: '1.3rem',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    fontSize: '1.2rem',
     marginBottom: '2rem',
   },
 });
@@ -51,9 +63,13 @@ export const featuresContainer = css({
   marginBottom: '3rem',
   gap: '2rem',
 
-  '@media (max-width: 768px)': {
-    flexDirection: 'column', 
-    alignItems: 'center',  
+  '@media (max-width: 1024px)': { // Para tablets
+    gap: '1.5rem',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    flexDirection: 'column',
+    alignItems: 'center',
     gap: '1.5rem',
   },
 });
@@ -64,9 +80,9 @@ export const featureBox = css({
   padding: '2rem',
   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
   textAlign: 'center',
-  width: '30%', 
+  width: '30%',
   transition: 'transform 0.3s ease',
-  
+
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -78,9 +94,13 @@ export const featureBox = css({
     transform: 'scale(1.05)',
   },
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 1024px)': { // Para tablets
+    width: '40%',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
     width: '80%',
-    padding: '1.5rem',  
+    padding: '1.5rem',
   },
 });
 
@@ -90,14 +110,19 @@ export const iconStyle = css({
   marginBottom: '1.5rem',
   left: '10px',
   position: 'absolute',
-  top: '-45px',  
+  top: '-45px',
   backgroundColor: '#007bff',
   padding: '1rem',
   borderRadius: '60%',
   boxShadow: '0 6px 10px rgba(0, 0, 0, 0.2)',
 
-  '@media (max-width: 768px)': {
-    width: '70px', 
+  '@media (max-width: 1024px)': { // Para tablets
+    width: '80px',
+    height: '80px',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    width: '70px',
     height: '70px',
   },
 });
@@ -109,17 +134,27 @@ export const ctaContainer = css({
   margin: '0 auto',
   marginBottom: '3rem',
 
-  '@media (max-width: 768px)': {
-    flexDirection: 'column',  
-    width: '100%', 
+  '@media (max-width: 1024px)': { // Para tablets
+    flexDirection: 'column',
+    width: '100%',
+    gap: '1.5rem',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    flexDirection: 'column',
+    width: '100%',
   },
 });
 
 export const checklistColumn = css({
   width: '45%',
 
-  '@media (max-width: 768px)': {
-    width: '100%', 
+  '@media (max-width: 1024px)': { // Para tablets
+    width: '100%',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    width: '100%',
     marginBottom: '1.5rem',
   },
 });
@@ -139,8 +174,12 @@ export const checklistItem = css({
   marginBottom: '1.5rem',
   color: '#007bff',
 
-  '@media (max-width: 768px)': {
-    fontSize: '1rem',  
+  '@media (max-width: 1024px)': { // Para tablets
+    fontSize: '1.1rem',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    fontSize: '1rem',
     marginBottom: '1rem',
   },
 });
@@ -150,8 +189,12 @@ export const ctaText = css({
   fontSize: '1.3rem',
   color: '#333',
 
-  '@media (max-width: 768px)': {
-    fontSize: '1.1rem',  
+  '@media (max-width: 1024px)': { // Para tablets
+    fontSize: '1.2rem',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    fontSize: '1.1rem',
   },
 });
 
@@ -171,8 +214,13 @@ export const ctaButton = css({
     backgroundColor: '#0056b3',
   },
 
-  '@media (max-width: 768px)': {
-    fontSize: '1rem',  
-    padding: '0.75rem 2rem',  
+  '@media (max-width: 1024px)': { // Para tablets
+    fontSize: '1.1rem',
+    padding: '0.9rem 2.5rem',
+  },
+
+  '@media (max-width: 768px)': { // Para móviles
+    fontSize: '1rem',
+    padding: '0.75rem 2rem',
   },
 });

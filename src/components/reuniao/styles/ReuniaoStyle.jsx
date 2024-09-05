@@ -15,9 +15,13 @@ export const reuniaoContainer = css({
   alignItems: 'center', 
   boxSizing: 'border-box', 
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 768px)': {  // Para móviles y tablets
     padding: '1rem',  
-    height: 'auto', 
+    height: 'auto',  
+  },
+
+  '@media (max-width: 480px)': {  // Para móviles más pequeños
+    padding: '0.8rem',
   },
 });
 
@@ -27,9 +31,14 @@ export const title = css({
   marginBottom: '2rem', 
   color: '#ffffff',
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 768px)': {  // Para móviles y tablets
     fontSize: '2.5rem',  
     marginBottom: '1.5rem', 
+  },
+
+  '@media (max-width: 480px)': {  // Para móviles más pequeños
+    fontSize: '2rem',
+    marginBottom: '1rem',
   },
 });
 
@@ -40,11 +49,18 @@ export const description = css({
   maxWidth: '800px', 
   color: '#ffffff',
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 768px)': {  // Para móviles y tablets
     fontSize: '1.3rem',  
     lineHeight: '1.8',  
     marginBottom: '2rem', 
     maxWidth: '90%',  
+  },
+
+  '@media (max-width: 480px)': {  // Para móviles más pequeños
+    fontSize: '1.1rem',  
+    lineHeight: '1.6',
+    marginBottom: '1.5rem',
+    maxWidth: '85%',
   },
 });
 
@@ -62,8 +78,13 @@ export const ctaButton = css({
     backgroundColor: '#333', 
   },
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 768px)': {  // Para móviles y tablets
     fontSize: '1.2rem',
     padding: '1rem 2rem', 
+  },
+
+  '@media (max-width: 480px)': {  // Para móviles más pequeños
+    fontSize: '1rem',
+    padding: '0.8rem 1.5rem',
   },
 });

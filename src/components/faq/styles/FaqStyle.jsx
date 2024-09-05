@@ -14,6 +14,10 @@ export const faqContainer = css({
   '@media (max-width: 768px)': {
     padding: '1rem',  
   },
+
+  '@media (max-width: 480px)': { // Para móviles pequeños
+    padding: '0.8rem',
+  },
 });
 
 export const title = css({
@@ -25,6 +29,10 @@ export const title = css({
 
   '@media (max-width: 768px)': {
     fontSize: '1.75rem',  
+  },
+
+  '@media (max-width: 480px)': { // Para móviles pequeños
+    fontSize: '1.5rem',
   },
 });
 
@@ -52,6 +60,11 @@ export const questionButton = css({
     padding: '0.75rem', 
     fontSize: '0.875rem',  
   },
+
+  '@media (max-width: 480px)': { // Para móviles pequeños
+    padding: '0.5rem', 
+    fontSize: '0.8rem',
+  },
 });
 
 export const answerContainer = css({
@@ -68,6 +81,10 @@ export const answerContainer = css({
 
   '@media (max-width: 768px)': {
     padding: '0.75rem',  
+  },
+
+  '@media (max-width: 480px)': { // Para móviles pequeños
+    padding: '0.6rem',  
   },
 });
 
@@ -91,5 +108,10 @@ export const ctaButton = css({
   '@media (max-width: 768px)': {
     fontSize: '0.875rem',  
     padding: '0.75rem 1.5rem', 
+  },
+
+  '@media (max-width: 480px)': { // Para móviles pequeños
+    fontSize: '0.75rem',
+    padding: '0.5rem 1rem',
   },
 });

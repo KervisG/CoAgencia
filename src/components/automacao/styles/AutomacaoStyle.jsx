@@ -13,9 +13,18 @@ export const automacaoContainer = css({
   textAlign: 'center', 
   overflow: 'hidden',
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 1024px)': {  // Ajustes para tablets
+    padding: '0 3rem',  
+    height: 'auto',  
+  },
+
+  '@media (max-width: 768px)': {  // Ajustes para móviles más grandes
     padding: '0 2rem',  
     height: 'auto',  
+  },
+
+  '@media (max-width: 480px)': {  // Ajustes para móviles más pequeños como Samsung S8
+    padding: '0 1rem',  
   },
 });
 
@@ -27,9 +36,19 @@ export const heading = css({
   maxWidth: '100%', 
   color: '#FFFFFF',
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 1024px)': {  // Ajustes para tablets
+    fontSize: '3rem', 
+    marginBottom: '1.3rem',  
+  },
+
+  '@media (max-width: 768px)': {  // Ajustes para móviles más grandes
     fontSize: '2.5rem', 
     marginBottom: '1rem',  
+  },
+
+  '@media (max-width: 480px)': {  // Ajustes para móviles más pequeños como Samsung S8
+    fontSize: '2rem', 
+    marginBottom: '0.8rem',  
   },
 });
 
@@ -41,10 +60,21 @@ export const description = css({
   width: '100%', 
   color: '#f0f0f0',
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 1024px)': {  // Ajustes para tablets
+    fontSize: '1.5rem',  
+    lineHeight: '1.8',  
+  },
+
+  '@media (max-width: 768px)': {  // Ajustes para móviles más grandes
     fontSize: '1.2rem',  
     lineHeight: '1.6', 
     marginBottom: '1.5rem', 
+  },
+
+  '@media (max-width: 480px)': {  // Ajustes para móviles más pequeños como Samsung S8
+    fontSize: '1rem',  
+    lineHeight: '1.5', 
+    marginBottom: '1.2rem',  
   },
 });
 
@@ -67,8 +97,18 @@ export const ctaButton = css({
     backgroundColor: '#333', 
   },
 
-  '@media (max-width: 768px)': {
+  '@media (max-width: 1024px)': {  // Ajustes para tablets
+    fontSize: '1.4rem', 
+    padding: '1.1rem 2.5rem',  
+  },
+
+  '@media (max-width: 768px)': {  // Ajustes para móviles más grandes
     fontSize: '1.2rem', 
-    padding: '1rem 2rem', 
+    padding: '1rem 2rem',  
+  },
+
+  '@media (max-width: 480px)': {  // Ajustes para móviles más pequeños como Samsung S8
+    fontSize: '1rem',  
+    padding: '0.8rem 1.5rem',  
   },
 });

@@ -38,6 +38,7 @@ export const destaqueContainer = css({
 export const destaqueNumberContainer = css({
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'flex-end',  // Alinea el contenido a la derecha
   gap: '0.5rem', 
 
   '@media (max-width: 768px)': {
@@ -45,12 +46,15 @@ export const destaqueNumberContainer = css({
   },
 });
 
+
 export const destaqueNumber = css({
   fontSize: '6rem',  
   fontWeight: 'bold',
   color: '#2382F6',  
   marginBottom: '1rem',  
-
+  marginLeft: 'auto',
+  alignSelf: 'center',  
+  
   '@media (max-width: 768px)': {
     fontSize: '4rem',  
     marginBottom: '0.5rem',  
@@ -107,31 +111,33 @@ export const textBlock = css({
 export const ctaButton = css({
   backgroundColor: '#2382F6',
   color: '#fff',
-  padding: '1rem 1rem',
+  padding: '1rem 2rem',  // Aumentar el padding horizontal para asegurar un mayor espacio interior
   fontSize: '1rem',
   borderRadius: '8px',
   cursor: 'pointer',
   border: 'none',
-  position: 'relative',
-  top: '20px',
+  display: 'inline-block',  // Asegurarse de que se trate como bloque en línea
+  whiteSpace: 'nowrap',  // Evitar que el texto se quiebre en varias líneas
+  overflow: 'hidden',  // Ocultar overflow para evitar problemas visuales
+  textOverflow: 'ellipsis',  // Añadir elipsis si el texto es demasiado largo
   transition: 'background-color 0.3s',
 
   '&:hover': {
     backgroundColor: '#1a6ec9',
   },
 
-
-  '@media (max-width: 768px)': {
-    fontSize: '0.9rem',  
-    padding: '0.6rem 1rem',  
-    top: '20px',  
+  '@media (max-width: 1024px)': {
+    padding: '0.8rem 1.5rem',
   },
 
-  
+  '@media (max-width: 768px)': {
+    fontSize: '0.9rem',
+    padding: '0.6rem 1.2rem',
+  },
+
   '@media (max-width: 480px)': {
-    fontSize: '0.8rem', 
-    padding: '0.5rem 0.8rem', 
-    top: '10px', 
+    fontSize: '0.8rem',
+    padding: '0.5rem 1rem',
   },
 });
 

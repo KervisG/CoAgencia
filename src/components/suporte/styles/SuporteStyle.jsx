@@ -1,6 +1,5 @@
 import { css } from "../../../../styled-system/css";
 
-
 export const container = css({
   display: 'flex',
   alignItems: 'center',
@@ -16,6 +15,10 @@ export const container = css({
     padding: '2rem 1rem',  
     height: 'auto', 
   },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    padding: '1.5rem 0.5rem',  
+  },
 });
 
 
@@ -25,11 +28,15 @@ export const timelineContainer = css({
   position: 'relative',
   width: '45%',
   gap: '3rem',
-  alignItems: 'center', 
+  alignItems: 'center',
 
   '@media (max-width: 768px)': {
     width: '100%',  
     gap: '2rem',  
+  },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    gap: '1.5rem',
   },
 });
 
@@ -60,6 +67,10 @@ export const timelineItem = css({
   '@media (max-width: 768px)': {
     padding: '1rem', 
   },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    padding: '0.8rem',
+  },
 });
 
 
@@ -72,6 +83,10 @@ export const title = css({
   '@media (max-width: 768px)': {
     fontSize: '1.3rem', 
   },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    fontSize: '1.2rem',
+  },
 });
 
 
@@ -82,6 +97,10 @@ export const subtitle = css({
 
   '@media (max-width: 768px)': {
     fontSize: '0.9rem',  
+  },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    fontSize: '0.8rem',
   },
 });
 
@@ -94,6 +113,10 @@ export const timelineLine = css({
 
   '@media (max-width: 768px)': {
     height: '2rem', 
+  },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    height: '1.5rem',
   },
 });
 
@@ -109,6 +132,10 @@ export const rightContent = css({
     width: '100%',  
     marginTop: '2rem', 
   },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    marginTop: '1.5rem',
+  },
 });
 
 
@@ -121,6 +148,10 @@ export const rightHeading = css({
   '@media (max-width: 768px)': {
     fontSize: '2rem',  
   },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    fontSize: '1.8rem',
+  },
 });
 
 export const rightText = css({
@@ -131,6 +162,11 @@ export const rightText = css({
 
   '@media (max-width: 768px)': {
     fontSize: '1rem',  
+  },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    fontSize: '0.9rem',
+    lineHeight: '1.6',
   },
 });
 
@@ -152,5 +188,10 @@ export const ctaButton = css({
   '@media (max-width: 768px)': {
     padding: '0.8rem 1.5rem',  
     fontSize: '0.9rem',  
+  },
+
+  '@media (max-width: 480px)': { // Ajustes para móviles pequeños
+    padding: '0.7rem 1.2rem',
+    fontSize: '0.8rem',
   },
 });

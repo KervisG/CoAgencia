@@ -73,7 +73,7 @@ export default function Header() {
                 gap: "8px",
               })}
             >
-              <input type="checkbox" className={css({ marginTop: "4px" })} />
+        
               <span className={css({ fontSize: "0.875rem" })}>
                 Ao enviar este formulário, você concorda com nossos termos de
                 uso e políticas de privacidade, conforme regulamentado pela
