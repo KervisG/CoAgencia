@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { css } from "../../../styled-system/css";
 import logo from "../../assets/logo_coagencia.png";
 import chatImage from "../../assets/logo_chat.png";
@@ -16,9 +16,37 @@ import {
 export default function Header() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TBLJSJL';
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js',
+    });
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío de datos, como una llamada a una API
+  
+
+    window.dataLayer.push({
+      event: 'formSubmit',
+      formData: {
+        name: e.target[0].value,
+        email: e.target[1].value,
+        phone: e.target[2].value,
+      }
+    });
+
     setIsSubmitted(true);
   };
 
