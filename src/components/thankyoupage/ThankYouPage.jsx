@@ -25,24 +25,27 @@ export default function ThankYouPage() {
         />
 
         {/* Mensaje de agradecimiento */}
-        <h2 className={css({
-          fontSize: "31px", 
-          fontWeight: "bold",
-          marginBottom: "16px",
-          color: "white", // Color blanco como en el Header
-        })}>
-          Obrigado por Enviar Suas Informações!
+        <h2
+          className={css({
+            fontSize: "31px",
+            fontWeight: "bold",
+            marginBottom: "16px",
+            color: "white", // Color blanco como en el Header
+          })}
+        >
+          Obrigado por se cadastrar!
         </h2>
 
-        <p className={css({
-          fontSize: "18px", 
-          color: "white", // Color blanco
-          maxWidth: "600px", 
-          lineHeight: "1.5",
-        })}>
-          Em breve entraremos em contato para continuar o processo. A CoAgência
-          está aqui para potencializar suas campanhas e garantir o melhor
-          atendimento.
+        <p
+          className={css({
+            fontSize: "18px",
+            color: "white", // Color blanco
+            maxWidth: "600px",
+            lineHeight: "1.5",
+          })}
+        >
+          Em breve a nossa Agente IA irá conversar com você. 
+          <br />Verifique o seu whatasapp.
         </p>
       </div>
     </div>
