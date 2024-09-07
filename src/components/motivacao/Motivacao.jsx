@@ -8,7 +8,7 @@ import {
   ctaButton
 } from './styles/MotivacaoStyle'; 
 import img from '../../assets/augusto.png'
-import ScrollLink from '../scrolllink';
+import ScrollLink from '../ScrollLink';
 
 export default function Motivacao() {
   return (

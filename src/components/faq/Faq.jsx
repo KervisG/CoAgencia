@@ -6,7 +6,7 @@ import {
   title,
   ctaButton,
 } from "./styles/FaqStyle";
-import ScrollLink from '../scrolllink';
+import ScrollLink from '../ScrollLink';
 
 const faqData = [
   {

@@ -14,7 +14,7 @@ import {
   largeBoldTitle, 
   destaqueTitle,
 } from "./styles/CampanhasStyle";
-import ScrollLink from '../scrolllink';
+import ScrollLink from '../ScrollLink';
 
 export default function Campanhas() {
   return (

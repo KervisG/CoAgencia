@@ -12,7 +12,7 @@ import {
 } from './styles/SuporteStyle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'; // Importa el ícono de la flecha
-import ScrollLink from '../scrolllink';
+import ScrollLink from '../ScrollLink';
 
 
 export default function Soporte() {

@@ -17,7 +17,7 @@ import {
 import imgcash from '../../assets/money.png';
 import imgclock from '../../assets/clock.png';
 import imgads from '../../assets/ads.png';
-import ScrollLink from '../scrolllink';
+import ScrollLink from '../ScrollLink';
 
 
 export default function Anuncios() {

@@ -5,7 +5,7 @@ import {
   description,
   ctaButton
 } from './styles/ReuniaoStyle'; 
-import ScrollLink from '../scrolllink';
+import ScrollLink from '../ScrollLink';
 
 export default function Reuniao() {
   return (
