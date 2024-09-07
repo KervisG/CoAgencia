@@ -18,6 +18,9 @@ import {
 import { db } from '../../firebase-config';
 import { collection, addDoc } from 'firebase/firestore';
 
+// Importar react-gtm-module para Google Tag Manager
+import TagManager from 'react-gtm-module';
+
 export default function Header() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -35,7 +38,7 @@ export default function Header() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     // Validar que el email sea válido
     if (!/\S+@\S+\.\S+/.test(formData.email)) {
       setError('Por favor, introduce un email válido.');
@@ -49,6 +52,15 @@ export default function Header() {
         email: formData.email,
         telefone: formData.telefone
       });
+
+      // Enviar evento a Google Tag Manager con el evento 'po-fht'
+      TagManager.dataLayer({
+        dataLayer: {
+          event: 'po-fht', // Evento personalizado
+          formData: formData // Datos que estás enviando
+        }
+      });
+
       console.log('Documento añadido en Firestore:', formData);
       setError(''); // Limpiar cualquier mensaje de error
       navigate('/thank-you'); // Navega a la página de agradecimiento
@@ -93,8 +105,8 @@ export default function Header() {
             <span className={highlightTextTwo}>
               Seu Atendimento e Potencialize
             </span>{" "}
-            Suas Campanhas de{" "}
-            <span className={highlightTextTwo}>Tráfico Pago con la CoAgencia</span>
+            Suas Campañas de{" "}
+            <span className={highlightTextTwo}>Tráfico Pago con la CoAgência</span>
           </p>
           <p className={textStyle}>
             Cada minuto{" "}
