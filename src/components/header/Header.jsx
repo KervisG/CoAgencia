@@ -41,13 +41,13 @@ export default function Header() {
 
     // Validar que el email sea válido
     if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      setError('Por favor, introduce un email válido.');
+      setError('Por favor, insira um e-mail válido.');
       return;
     }
 
     try {
       // Enviar datos a Firestore
-      await addDoc(collection(db, 'Telefono'), {
+      await addDoc(collection(db, 'Telefone'), {
         nome: formData.nome,
         email: formData.email,
         telefone: formData.telefone
@@ -61,12 +61,12 @@ export default function Header() {
         }
       });
 
-      console.log('Documento añadido en Firestore:', formData);
-      setError(''); // Limpiar cualquier mensaje de error
-      navigate('/thank-you'); // Navega a la página de agradecimiento
+      console.log('Documento adicionado no Firestore:', formData);
+      setError(''); // Limpar qualquer mensagem de erro
+      navigate('/thank-you'); // Navegar para a página de agradecimento
     } catch (error) {
-      console.error("Error al añadir documento a Firestore:", error);
-      setError('Hubo un error al enviar los datos. Inténtalo de nuevo.');
+      console.error("Erro ao adicionar documento ao Firestore:", error);
+      setError('Houve um erro ao enviar os dados. Tente novamente.');
     }
   };
 
@@ -97,28 +97,28 @@ export default function Header() {
             maxWidth: "580px",
             lineHeight: "1.2",
           })}>
-            Cansado de Perder Vendas por Falta de{" "}
-            <span className={highlightText}>Respostas Rápidas?</span>
+            Cansado de perder vendas por falta de{" "}
+            <span className={highlightText}>respostas rápidas?</span>
           </h1>
           <p className={textStyle}>
             Automatize{" "}
             <span className={highlightTextTwo}>
-              Seu Atendimento e Potencialize
+              seu atendimento e potencialize
             </span>{" "}
-            Suas Campañas de{" "}
-            <span className={highlightTextTwo}>Tráfico Pago con la CoAgência</span>
+            suas campanhas de{" "}
+            <span className={highlightTextTwo}>tráfego pago com a CoAgência</span>
           </p>
           <p className={textStyle}>
             Cada minuto{" "}
             <span className={highlightText}>
-              sin respuesta es una oportunidad perdida
+              sem resposta é uma oportunidade perdida
             </span>
-            . Con nuestra automatización inteligente, usted garantiza
-            <span className={highlightText}> atención 24/7</span>, mientras{" "}
+            . Com nossa automação inteligente, você garante
+            <span className={highlightText}> atendimento 24/7</span>, enquanto{" "}
             <span className={highlightText}>
-              nuestras estrategias de tráfico pago
+              nossas estratégias de tráfego pago
             </span>{" "}
-            convierten cada clic en una venta.
+            transformam cada clique em uma venda.
           </p>
 
           {/* Mostrar mensaje de error si existe */}
@@ -129,17 +129,17 @@ export default function Header() {
             <input type="text" name="nome" placeholder="Nome" className={inputStyle} value={formData.nome} onChange={handleChange} />
             <input type="email" name="email" placeholder="E-mail" className={inputStyle} value={formData.email} onChange={handleChange} />
             <input type="tel" name="telefone" placeholder="Telefone" className={inputStyle} value={formData.telefone} onChange={handleChange} />
-            <button type="submit" className={buttonStyle}>Enviar e Conectar con el Agente de IA</button>
+            <button type="submit" className={buttonStyle}>Enviar e Conectar com o Agente de IA</button>
           </form>
 
-          {/* Formulario de ActiveCampaign */}
+          {/* Formulário do ActiveCampaign */}
           <div dangerouslySetInnerHTML={activeCampaignFormHtml} />
         </div>
         
         <div className={css({ marginLeft: "24px", maxWidth: "600px" })}>
           <img
             src={chatImage}
-            alt="Chat Icon"
+            alt="Ícone de Chat"
             className={css({ width: "100%", height: "auto", marginRight: '150px' })}
           />
         </div>
