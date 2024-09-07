@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom'; // Importamos el hook useNavigate para redirección
+import React, { useState } from "react";
 import { css } from "../../../styled-system/css";
 import logo from "../../assets/logo_coagencia.png";
 import chatImage from "../../assets/logo_chat.png";
@@ -15,67 +14,50 @@ import {
 } from "../../styles/HeaderStyle";
 
 export default function Header() {
-  const navigate = useNavigate(); // Hook para redirigir a otra página
+  const [formData, setFormData] = useState({
+    nome: '',
+    email: '',
+    telefone: ''
+  });
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TBLJSJL';
-    document.head.appendChild(script);
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      'gtm.start': new Date().getTime(),
-      event: 'gtm.js',
-    });
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Form Data Submitted:', formData);
+    // Aquí puedes agregar más lógica para procesar los datos del formulario
+    // Por ejemplo, enviar a una API o mostrar un mensaje de éxito en la UI
+  };
 
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-
-    window.dataLayer.push({
-      event: 'formSubmit',
-      formData: {
-        name: e.target[0].value,
-        email: e.target[1].value,
-        phone: e.target[2].value,
-      }
-    });
-
-
-    navigate('/thank-you');
+  const activeCampaignFormHtml = {
+    __html: `<div class="_form_1"></div><script src="https://coagencia13255.activehosted.com/f/embed.php?id=1" charset="utf-8"></script>`
   };
 
   return (
     <div className={headerStyle}>
-      <div
-        className={css({
+      <div className={css({
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           width: "100%",
-          flexWrap: "wrap", 
+          flexWrap: "wrap",
         })}
       >
         <div className={contentStyle}>
           <img
-            src={logo}  
+            src={logo}
             alt="Logo CoAgência"
             className={css({ width: "200px", marginBottom: "24px" })}
           />
-
-          {/* Muestra el contenido del formulario */}
           <h1 className={css({
-            fontSize: "31px", 
+            fontSize: "31px",
             fontWeight: "bold",
             marginBottom: "25px",
-            maxWidth: "580px",  
-            lineHeight: "1.2", 
+            maxWidth: "580px",
+            lineHeight: "1.2",
           })}>
             Cansado de Perder Vendas por Falta de{" "}
             <span className={highlightText}>Respostas Rápidas?</span>
@@ -86,41 +68,27 @@ export default function Header() {
               Seu Atendimento e Potencialize
             </span>{" "}
             Suas Campanhas de{" "}
-            <span className={highlightTextTwo}>Tráfego Pago com a CoAgência</span>
+            <span className={highlightTextTwo}>Tráfico Pago con la CoAgencia</span>
           </p>
           <p className={textStyle}>
             Cada minuto{" "}
             <span className={highlightText}>
-              sem resposta é uma oportunidade perdida
+              sin respuesta es una oportunidad perdida
             </span>
-            . Com nossa automação inteligente, você garante
-            <span className={highlightText}> atendimento 24/7</span>, enquanto{" "}
+            . Con nuestra automatización inteligente, usted garantiza
+            <span className={highlightText}> atención 24/7</span>, mientras{" "}
             <span className={highlightText}>
-              nossas estratégias de tráfego pago
+              nuestras estrategias de tráfico pago
             </span>{" "}
-            convertem cada clique em uma venda.
-          </p> 
-          <form className={formStyle} onSubmit={handleSubmit}>
-            <input type="text" placeholder="Nome" className={inputStyle} />
-            <input type="email" placeholder="E-mail" className={inputStyle} />
-            <input type="tel" placeholder="Telefone" className={inputStyle} />
-            <label
-              className={css({
-                display: "flex",
-                alignItems: "start",
-                gap: "8px",
-              })}
-            >
-              <span className={css({ fontSize: "0.875rem" })}>
-                Ao enviar este formulário, você concorda com nossos termos de
-                uso e políticas de privacidade, conforme regulamentado pela
-                LGPD.
-              </span>
-            </label>
-            <button type="submit" className={buttonStyle}>
-              Enviar e Conectar com o Agente de IA
-            </button>
+            convierten cada clic en una venta.
+          </p>
+          <form className={formStyle} id="MeuFormulario" onSubmit={handleSubmit}>
+            <input type="text" name="nome" placeholder="Nome" className={inputStyle} value={formData.nome} onChange={handleChange} />
+            <input type="email" name="email" placeholder="E-mail" className={inputStyle} value={formData.email} onChange={handleChange} />
+            <input type="tel" name="telefone" placeholder="Telefone" className={inputStyle} value={formData.telefone} onChange={handleChange} />
+            <button type="submit" className={buttonStyle}>Enviar e Conectar con el Agente de IA</button>
           </form>
+          <div dangerouslySetInnerHTML={activeCampaignFormHtml} />
         </div>
         <div className={css({ marginLeft: "24px", maxWidth: "600px" })}>
           <img

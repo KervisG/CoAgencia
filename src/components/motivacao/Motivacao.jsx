@@ -8,6 +8,7 @@ import {
   ctaButton
 } from './styles/MotivacaoStyle'; 
 import img from '../../assets/augusto.png'
+import ScrollLink from '../scrolllink';
 
 export default function Motivacao() {
   return (
@@ -32,7 +33,7 @@ export default function Motivacao() {
           nossos contratos se estendem por mais de dois anos, garantindo resultados contínuos. Cadastre-se 
           e faça parte dessa história.
         </p>
-        <a className={ctaButton} href='MeuFormulario'>JUNTE-SE A NÓS E POTENCIALIZE SEU NEGÓCIO</a>
+        <ScrollLink className={ctaButton} targetId="MeuFormulario">JUNTE-SE A NÓS E POTENCIALIZE SEU NEGÓCIO</ScrollLink>
       </div>
     </div>
   );

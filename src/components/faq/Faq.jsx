@@ -6,6 +6,7 @@ import {
   title,
   ctaButton,
 } from "./styles/FaqStyle";
+import ScrollLink from '../scrolllink';
 
 const faqData = [
   {
@@ -76,9 +77,9 @@ export default function Faq() {
           )}
         </div>
       ))}
-      <a className={ctaButton} href="MeuFormulario">
+      <ScrollLink className={ctaButton} targetId="MeuFormulario">
         FALE COM NOSSO AGENTE DE IA
-      </a>
+      </ScrollLink>
     </div>
   );
 }

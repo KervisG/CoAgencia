@@ -12,6 +12,8 @@ import {
 } from './styles/SuporteStyle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'; // Importa el ícono de la flecha
+import ScrollLink from '../scrolllink';
+
 
 export default function Soporte() {
   return (
@@ -42,7 +44,7 @@ export default function Soporte() {
         <p className={rightText}>
           Com <strong>inteligência artificial avançada</strong>, oferecemos respostas rápidas e personalizadas que mantêm seu público engajado, enquanto você dorme tranquilo.
         </p>
-        <a className={ctaButton} href='MeuFormulario'>OTIMIZE AGORA E CONVERTA MAIS</a>
+        <ScrollLink className={ctaButton} targetId="MeuFormulario">OTIMIZE AGORA E CONVERTA MAIS</ScrollLink>
       </div>
     </div>
   );

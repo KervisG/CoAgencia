@@ -14,6 +14,7 @@ import {
   largeBoldTitle, 
   destaqueTitle,
 } from "./styles/CampanhasStyle";
+import ScrollLink from '../scrolllink';
 
 export default function Campanhas() {
   return (
@@ -59,9 +60,9 @@ export default function Campanhas() {
             Está pronto para ver suas vendas crescerem? Cadastre-se agora e
             descubra o poder do tráfego pago aliado ao nosso autoatendimento.
           </p>
-          <a className={ctaButton} href='MeuFormulario'>
+          <ScrollLink className={ctaButton} targetId="MeuFormulario">
             CONHEÇA NOSSAS ESTRATÉGIAS DE TRÁFEGO PAGO
-          </a>
+          </ScrollLink>
         </div>
       </div>
 
@@ -93,9 +94,9 @@ export default function Campanhas() {
           </ul>
         </div>
 
-        <a className={ctaButton} href='MeuFormulario'>
+        <ScrollLink className={ctaButton} targetId="MeuFormulario">
           VEJA COMO INTEGRAMOS SUAS SOLUÇÕES
-        </a>
+        </ScrollLink>
       </div>
     </div>
   );

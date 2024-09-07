@@ -5,16 +5,20 @@ import {
   description,
   ctaButton
 } from './styles/ReuniaoStyle'; 
+import ScrollLink from '../scrolllink';
 
 export default function Reuniao() {
   return (
     <div className={reuniaoContainer}>
       <h2 className={title}>Vamos Marcar uma Reunião?</h2>
       <p className={description}>
-        Nossa automação está pronta para ajudá-lo a marcar uma reunião onde discutiremos as melhores estratégias para o seu negócio. 
-        Não perca tempo, agende agora e veja como podemos acelerar suas vendas.
+        Nossa automação está pronta para ajudá-lo a marcar uma reunião onde discutiremos las mejores estratégias para su negocio. 
+        No pierda tiempo, programe ahora y vea cómo podemos acelerar sus ventas.
       </p>
-      <a className={ctaButton} href='MeuFormulario'>AGENDE SUA REUNIÃO</a>
+   
+      <ScrollLink targetId="MeuFormulario" className={ctaButton}>
+        AGENDE SUA REUNIÃO
+      </ScrollLink>
     </div>
   );
 }

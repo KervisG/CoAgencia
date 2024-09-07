@@ -6,6 +6,7 @@ import {
   highlight, 
   ctaButton
 } from './styles/AutomacaoStyle';
+import ScrollLink from '../scrolllink';
 
 export default function Automacao() {
   return (
@@ -16,7 +17,7 @@ export default function Automacao() {
       <p className={description}>
         Esqueça a ideia de que <span className={highlight}>automação é fria e impessoal.</span> Nossa tecnologia é projetada para fornecer respostas que <span className={highlight}>parecem humanas</span>, enquanto você foca em crescer seu negócio. E o melhor: ela nunca dorme, nunca para, e sempre converte.
       </p>
-      <a className={ctaButton} href='MeuFormulario'>EXPERIMENTE NOSSA AUTOMAÇÃO INTELIGENTE</a>
+      <ScrollLink className={ctaButton} targetId="MeuFormulario">EXPERIMENTE NOSSA AUTOMAÇÃO INTELIGENTE</ScrollLink>
     </div>
   );
 }

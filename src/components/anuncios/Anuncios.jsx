@@ -17,6 +17,8 @@ import {
 import imgcash from '../../assets/money.png';
 import imgclock from '../../assets/clock.png';
 import imgads from '../../assets/ads.png';
+import ScrollLink from '../scrolllink';
+
 
 export default function Anuncios() {
   return (
@@ -78,7 +80,7 @@ export default function Anuncios() {
         Pronto para ver resultados reais? Cadastre-se agora e veja como nossas campanhas podem transformar cliques em vendas.
       </p>
 
-      <a className={ctaButton} href='MeuFormulario'>DESCUBRA COMO MELHORAR SUAS CAMPANHAS</a>
+      <ScrollLink className={ctaButton} targetId="MeuFormulario">DESCUBRA COMO MELHORAR SUAS CAMPANHAS</ScrollLink>
     </div>
   );
 }
